@@ -2,11 +2,23 @@ import React, { useState, useEffect } from "react";
 import Home from "./components/Home";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import storage from "local-storage-fallback";
+import theme from "styled-theming";
+
+// Declaring style modes for elements
+const getForeGround = theme("mode", {
+  light: "#111",
+  dark: "#EEE"
+});
+
+const getBackground = theme("mode", {
+  light: "#EEE",
+  dark: "#111"
+});
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: ${props => (props.theme.mode === "dark" ? "#111" : "#EEE")};
-    color: ${props => (props.theme.mode === "dark" ? "#EEE" : "#111")};
+    background-color: ${getBackground};
+    color: ${getForeGround};
   }
 `;
 
