@@ -1,10 +1,11 @@
 import React from "react";
+import { Heading } from "./Heading";
 
 const Home = () => {
   return (
-    <div>
+    <Heading variant="default">
       <p>Home Page</p>
-    </div>
+    </Heading>
   );
 };
 
