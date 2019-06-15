@@ -35,6 +35,7 @@ function App() {
             type="checkbox"
             id="theme-controller"
             onChange={e => setTheme(theme.mode === "dark" ? { mode: "light" } : { mode: "dark" })}
+            checked={theme.mode === "dark" ? true : false}
           />
           <span class="slider round" />
         </label>
